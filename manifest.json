@@ -3,18 +3,20 @@
     "name": "Playlist Sorter for Youtube Music",
     "version": "0.1.0",
     "description": "A simple playlist sorter for Youtube Music.",
+    "host_permissions": ["<all_urls>"],
     "permissions": [
       "storage",
       "tabs",
       "activeTab",
-      "scripting"
+      "scripting",
+      "webNavigation"
     ],
     "background": {
-      "service_worker": "background.js"
+      "service_worker": "background.mjs",
+      "type": "module"
     },
     "action": {
       "default_popup": "public/popup.html"
-    }
-    
+    }    
   }
   
