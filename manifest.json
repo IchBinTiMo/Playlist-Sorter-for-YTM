@@ -1,0 +1,20 @@
+{
+    "manifest_version": 3,
+    "name": "Playlist Sorter for Youtube Music",
+    "version": "0.1.0",
+    "description": "A simple playlist sorter for Youtube Music.",
+    "permissions": [
+      "storage",
+      "tabs",
+      "activeTab",
+      "scripting"
+    ],
+    "background": {
+      "service_worker": "background.js"
+    },
+    "action": {
+      "default_popup": "public/popup.html"
+    }
+    
+  }
+  
