@@ -1,7 +1,7 @@
 function toggle(toggled) {
-    function createChild(name, tagname) {
+    function createChild(name) {
       let child = document.createElement("div");
-      child.id = "playlist-shelf-legend-" + name;
+      child.id = "playlist-shelf-legend-" + name + "AAA";
       child.textContent = name.charAt(0).toUpperCase() + name.slice(1);
 
       child.style.fontSize = "16px";
@@ -40,15 +40,15 @@ function toggle(toggled) {
         
         legend.children[5].style.width = "100px";
         
-        let title = createChild("title", "div");
-        let artist = createChild("artist", "yt-formatted-string");
-        let album = createChild("album", "yt-formatted-string");
-        let duration = createChild("duration", "yt-formatted-string");
+        let title = createChild("title");
+        let artist = createChild("artist");
+        let album = createChild("album");
+        let duration = createChild("duration");
         
         legend.children[4].children[0].children[0].insertBefore(title, legend.children[4].children[0].children[0].children[0]);
         
         if (template.children[0].attributes[2].value === "4") {
-            let play = createChild("play", "div");
+            let play = createChild("play");
             
             artist.style.width = "48%";
             play.style.width = "48%";
