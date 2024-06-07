@@ -24,4 +24,4 @@ document.getElementById("switch").addEventListener("change", function(event) {
           })
       }
     });
-  });
+});

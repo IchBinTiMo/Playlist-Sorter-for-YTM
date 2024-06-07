@@ -5,9 +5,9 @@ chrome.runtime.onInstalled.addListener(() => {
 });
 
 chrome.webNavigation.onHistoryStateUpdated.addListener((details) => {
-    chrome.storage.sync.get(["toggled"], function(result) {
-        if(details.url.includes("https://music.youtube.com/playlist?")) {
-            if(result.toggled) {
+    chrome.storage.sync.get(["toggled"], function (result) {
+        if (details.url.includes("https://music.youtube.com/playlist?")) {
+            if (result.toggled) {
                 chrome.scripting.executeScript({
                     target: { tabId: details.tabId },
                     func: toggle,
